@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .tabs{width:500px; margin: 0 auto; background-color: green;}
+ #tab li{
+	float: left; list-style: none;
+  margin: 10px 10px;
+}
+#tab li a{
+  /* display:inline-block; */
+  text-decoration:none;
+	line-height: 40px;
+	text-align: center;
+  color:#000;
+}
+#container{
+	position: relative;
+}
+#content1,#content2,#content3{
+	width: 300px;
+	height: 100px;
+	padding:30px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+}
+#tab li:first-child,#content1{
+	background-color: #ffcc00;
+}
+#tab li:first-child+li,#content2{
+	background-color: #ff00cc;
+}
+#tab li:first-child+li+li,#content3{
+	background-color: #00ccff;}
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <ul id="tab">
+      <li><a href="javascript:;" data-click="tab" data-div="content1">张网推荐价格</a></li>
+   
+      <li><a href="javascript:;"  data-click="tab" data-div="content2">销量</a></li>
+      
+      <li><a href="javascript:;"  data-click="tab" data-div="content3">推荐</a></li>
+
+    </ul>
+  </div>
+  <div>
+    <div id="content1"> <p>张网推荐价格</p> </div>
+    <div id="content2"> <p>销量</p> </div>
+    <div id="content3"> <p>推荐</p> </div>
+  </div>
+  <script>
+  // (function(){
+  //   //查找事件元素
+  //   //
+  // })
+  
+  (function(){
+    //查找事件的元素
+    //查找id为tab下的li下的data-click属性为tab的所有按钮的元素
+    var tabs=document.querySelectorAll(
+      "ul#tab li [data-click=tab]"
+    );
+    console.log(tabs);
+    //2.绑定事件处理函数
+    //定义全局变量 用于递增zIndex的值
+    var zIndex=10;
+    //遍历tabs中每个按钮
+    for(var tab of tabs){
+      //每遍历一个按钮 就是为其绑定单击事件
+      tab.onclick=function(){
+    var tab=this;//<a>
+      //按id查找当前啊对应的div
+    var id=tab.getAttribute("data-div");
+    console.log(id)
+    //按id查找当前a对应的div
+    var div=document.getElementById(id);
+    console.log(div)
+
+    //4.修改元素
+    //修改当前a对应的div的z-index属性
+    div.style.zIndex=zIndex;
+    //修改之后  必须将本次的z-index+1，保证下次的值高于zIndex
+    zIndex++;
+     }
+    }
+  })()
+  
+  </script>
+
+
+
+</body>
+</html>

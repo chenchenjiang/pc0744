@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../CSS/member/register.css">
+  <title>会员注册-张网旅游</title>
+
+</head>
+<body> 
+ <header id="header"></header>
+<!-- 1 -->
+<div class="in_one clearfix">
+  <div class="login_one">
+    <a href="javascript:;"><img src="../../img/res/images/logo.png" alt=""></a>
+    <span>|</span>
+    <span>欢迎注册</span>
+  </div>
+</div>
+<style>
+.reg_no{z-index: 6;
+  background: url(../../img/res/images/st-ts-ico.png)no-repeat;background-position: 0px -47px;} 
+.reg_yes{z-index: 3;
+  background: url(../../img/res/images/st-ts-ico.png)no-repeat;background-position: 0px -81px;} 
+.input_span{margin:0px -20px 0 -2px; color:red; font-size: 8px !important;}
+.input_tx  {vertical-align: middle;margin-left: 4px;width:130px; height:40px;}
+.input_phone{width:130px !important;    background: #fdf6e8;color: #999;height: 40px;margin-left: 4px;vertical-align: middle;width: 130px;cursor: pointer;}
+
+</style>
+<!--2  -->
+<div class="re_one clearfix" style="background-color:#ede5d4 ">
+<div class="re_one_l">
+  <ul>
+    <!-- id=phone -->
+    <li>
+      <span>
+        <i>*</i> 
+        你的手机
+      </span>
+      <input type="text" placeholder="请输入手机号码" id="phone" onkeyup="zc()" >
+      <!--  -->
+      <!-- onblur="zn()"  -->
+      <span class="phone" ></span>
+        <!-- 手机号码不可用 -->
+      <span class="b" style="margin: 0 -105px">
+      <b id="tishi" class="input_span"></b></span>
+    </li>
+    <!-- <li>
+      <span>
+        <i>*</i>
+        图形验证码
+      </span>
+      <input type="text" placeholder="请填写验证码" style="width:210px;">
+      <img src="../favicon.ico" alt=""  class="input_tx">
+      <span class="reg_yes" ">
+        <b class="input_span">验证码错误</b>
+      </span>
+    <span class="reg_yes">
+      <b class="input_span"></b>
+    </span>
+    </li>-->
+    <!-- <li> 
+      <span>
+        <i>*</i>
+        手机验证码
+      </span>
+      <input type="text"  style="width:210px;"> 
+      <input type="button" class="input_phone" value="获取验证码">
+      <span class="reg_yes">
+          <b class="input_span">验证码错误</b>
+        </span>
+      <span class="reg_yes">
+        <b class="input_span"></b>
+      </span>
+    </li> -->
+    <!-- <li>
+      <span><i>*</i>设置密码</span><input type="text" placeholder="请输入登录密码" id="pwd">
+      <span class="tishi" >
+        <b class="input_span"> </b>
+      </span>
+      <span class="">
+        <b class="input_span"></b>
+      </span>
+    </li> -->
+    <!-- <li>
+      <span>
+        <i>*</i>
+        确认密码
+      </span>
+      <input type="text" placeholder="请确认输入登录密码" id="pwd1">
+      <span class="">
+          <b class="input_span"></b>
+        </span>
+      <span class="">
+        <b class="input_span"></b>
+      </span>
+    </li> -->
+    <li>
+      <p>
+        <input type="checkbox" class="ck_input" checked>
+        <span>我已阅读并接受</span>
+        <a href="javascript:;">《张网旅游会员服务条款》</a>
+      </p></li>
+     
+    <li><button  onclick="zcLogin()">同意服务条款并注册</button></li>
+    <li><span>已经有账号，<a href="login.html">立即登录&lt;</a></span></li>
+    <li><span>合作网站账号登录</span></li>
+  </ul>
+</div>
+<div class="re_one_n">
+  <div>
+    <p><span>注册</span>送好礼</p>
+    <p>现在注册张网旅游会员</p>
+    <p>即可获得<span>400</span>积分</p>
+  </div>
+  <div>
+    <p>为什么选择<span>张网旅游</span>?</p>
+  </div>
+  <ul>
+    <li>
+      <img src="../../img/res/images/ico/clock.png" alt="">
+      <p>省时省钱</p> 
+      <span>品质更高，价格更低</span>
+    </li>
+    <li>
+      <img src="../../img/res/images/ico/hotel.png" alt="">
+      <p>门票+酒店</p>
+      <span>全面自助游服务供应商</span>
+    </li>
+    <li>
+      <img src="../../img/res/images/ico/houes.png" alt="">
+      <p>7天×24小时服务</p>
+      <span>实力体现，体验更佳</span>
+    </li>
+    <li>
+      <img src="../../img/res/images/ico/clock.png" alt="">
+      <p>省时省钱</p>
+      <span>品质更高，价格更低</span>
+    </li>
+    <img src="../../img/res/images/img_foot.gif" alt="">
+  </ul>
+    
+ 
+
+ 
+</div>
+</div>
+
+<script>
+
+
+
+
+
+</script>
+
+
+
+
+
+<footer id="footer"></footer>
+
+
+  <!-- wb -->
+ 
+</body>
+<script src="../../JS/jquery.min.js"></script>
+<script src="../../JS/header.js"></script>
+<script src="../../JS/footer.js"></script>
+<script src="../../JS/register.js"></script>
+</html>
